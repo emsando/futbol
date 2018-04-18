@@ -1,7 +1,7 @@
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, 'public');
-const SRC_DIR = path.resolve(__dirname, 'src');
+const BUILD_DIR = path.join(__dirname, '/client/public');
+const SRC_DIR = path.join(__dirname, '/client/src');
 
 module.exports = {
   entry: `${SRC_DIR}/App.jsx`,

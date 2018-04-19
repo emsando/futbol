@@ -7,11 +7,19 @@ class App extends React.Component {
     super(props);
     this.state = {};
     this.user = null;
+
+    this.handleLogin = this.handleLogin.bind(this);
+  }
+
+  handleLogin(username, password) {
+    this.user = username;
+    console.log('App: ', username);
+    console.log('App: ', password);
   }
 
   render() {
     return (
-      <Login />
+      <Login handleLogin={this.handleLogin} />
     );
   }
 }

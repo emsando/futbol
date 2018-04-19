@@ -19,8 +19,13 @@ class Login extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state.username);
-    console.log(this.state.password);
+    console.log('Login: ', this.state.username);
+    console.log('Login: ', this.state.password);
+    this.props.handleLogin(this.state.username, this.state.password);
+    this.setState({
+      username: '',
+      password: '',
+    });
     event.preventDefault();
   }
 
@@ -68,20 +73,20 @@ class Login extends React.Component {
                 Login
                 </Button>
               </Segment>
-    
-              <Segment raised>
-                <Button fluid size="large" color="facebook">
-                  <Icon name="facebook" /> Sign in with Facebook
-                </Button>
-              </Segment>
-    
-              <Segment raised>
-                <Message>
-                First time here? <a href="">Sign up</a>
-                </Message>
-              </Segment>
-    
             </Form>
+
+            <Segment raised>
+              <Button fluid size="large" color="facebook">
+                <Icon name="facebook" /> Sign in with Facebook
+              </Button>
+            </Segment>
+
+            <Segment raised>
+              <Message>
+              First time here? <a href="">Sign up</a>
+              </Message>
+            </Segment>
+
           </Grid.Column>
         </Grid>
       </div>

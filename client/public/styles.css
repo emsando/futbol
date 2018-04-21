@@ -2,3 +2,12 @@
 .login-container {
   height: 100%
 }
+
+.sign-up-link {
+  color: #4183c4;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
